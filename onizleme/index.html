@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>MsXLabs Mavi Karanlık — Webamp skin önizleme</title>
+<style>html,body{margin:0;height:100%;background:#2b2f36}#w{position:relative;height:100vh}</style>
+</head>
+<body>
+<div id="w"></div>
+<!-- Yerel önizleme: `npm i webamp@2.3.1`, node_modules/webamp/built/webamp.bundle.min.js dosyasını bu klasöre kopyalayın,
+     ../msx-mavi-karanlik.wsz dosyasını da yanına koyun ve basit bir statik sunucuyla açın. -->
+<script src="./webamp.bundle.min.js"></script>
+<script>
+  const w = new Webamp({
+    initialSkin: { url: "./msx-mavi-karanlik.wsz" },
+    windowLayout: { main: { position: { left: 40, top: 40 } }, equalizer: { position: { left: 40, top: 156 } }, playlist: { position: { left: 40, top: 272 }, size: [4, 3] } }
+  });
+  w.renderWhenReady(document.getElementById("w"));
+</script>
+</body>
+</html>
